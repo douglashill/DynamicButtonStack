@@ -6,7 +6,9 @@ DynamicButtonStack lays out a collection of buttons in either a column or a row.
 
 ## Requirements
 
-DynamicButtonStack requires iOS 13. On older versions `UIButton` responds to `imageEdgeInsets` slightly differently in some cases. It has only been tested with Swift but should work with Objective-C apps too. The latest stable Xcode is expected.
+- DynamicButtonStack requires iOS 13. (On older versions `UIButton` responds to `imageEdgeInsets` slightly differently in some cases.)
+- It has only been tested with Swift but should work with Objective-C apps too.
+- The latest stable Xcode is expected.
 
 ## Installation
 
@@ -69,30 +71,29 @@ override func layoutSubviews() {
 
 The buttons can be styled however you like. Colour, font, shadow, highlight state etc.
 
-- Do set an image.
-- Do set a title.
-- Don’t modify the image or title insets because DynamicButtonStack needs to adjust these to set the stacking and alignment inside the buttons.
-- Do customise any other properties however you like. Setting `contentEdgeInsets` is recommended.
+- Set both an image and a title.
+- Don’t modify the `imageEdgeInsets` or `titleEdgeInsets` because DynamicButtonStack needs to adjust these to set the stacking and alignment inside the buttons.
+- Customise any other properties however you like. Setting `contentEdgeInsets` is recommended.
 
 ## Status
 
-DynamicButtonStack is considered ready for use in production.
+✅ DynamicButtonStack is considered ready for use in production.
 
-There is no private API use or interference with private subviews.
+😇 There is no private API use or interference with private subviews.
 
 ## Q & A
 
 ### Does DynamicButtonStack support being laid out with constraints?
 
-No. It must be measured using `sizeThatFits`. It does not supply an `intrinsicContentSize` because like with text, the intrinsic height depends on the width.
+🙅‍♀️ No. It must be measured using `sizeThatFits`. It does not supply an `intrinsicContentSize` because like with text, the intrinsic height depends on the width.
 
 ### Does DynamicButtonStack use modern layout API like constraints, UIStackView or SwiftUI?
 
-No.
+😄 No.
 
 ### Would this be easier with SwiftUI?
 
-Maybe. If you think so I’d love to see how this would look.
+🤷‍♂️ Maybe. If you think so I’d love to see how this would look.
 
 ## Credits
 
