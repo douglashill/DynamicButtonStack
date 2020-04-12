@@ -5,10 +5,10 @@ Pod::Spec.new do |spec|
     spec.license = { :type => 'MIT', :file => 'License.txt' }
     spec.homepage = 'https://github.com/douglashill/DynamicButtonStack'
     spec.authors = { 'Douglas Hill' => 'https://twitter.com/qdoug' }
-    spec.summary = 'A view for UIKit apps that dynamically lays out a collection of buttons in either a column or a row to suit the button content and the available space.'
+    spec.summary = 'A view that dynamically lays out a collection of buttons to suit the button content and the available space.'
 
     spec.description = <<-DESC
-A view for UIKit apps that dynamically lays out a collection of buttons in either a column or a row to suit the button content and the available space.
+A view for UIKit apps that dynamically lays out a collection of UIButtons in either a column or a row to suit the button content and the available space.
                        DESC
 
     spec.source = { :git => 'https://github.com/douglashill/DynamicButtonStack.git', :tag => spec.version.to_s }
