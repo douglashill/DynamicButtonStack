@@ -7,11 +7,11 @@ import UIKit
 /// within each button are also stacked either horizontally or vertically.
 /// The height required should be found by calling sizeThatFits and passing in the width limit.
 /// The height passed to sizeThatFits should be greatestFiniteMagnitude.
-class DynamicButtonStack: UIView {
+public class DynamicButtonStack: UIView {
 
     private let internalSpacing: CGFloat = 8
 
-    var buttons: [UIButton] = [] {
+    public var buttons: [UIButton] = [] {
         willSet {
             for button in buttons {
                 button.removeFromSuperview()
@@ -31,7 +31,7 @@ class DynamicButtonStack: UIView {
         }
     }
 
-    convenience init(buttons: [UIButton]) {
+    public convenience init(buttons: [UIButton]) {
         self.init(frame: .zero)
 
         self.buttons = buttons
@@ -71,7 +71,7 @@ class DynamicButtonStack: UIView {
         }
     }
 
-    override func sizeThatFits(_ availableSize: CGSize) -> CGSize {
+    public override func sizeThatFits(_ availableSize: CGSize) -> CGSize {
         precondition(availableSize.height == .greatestFiniteMagnitude, "\(DynamicButtonStack.self) does not support limiting the available height.")
 
         if buttons.isEmpty {
@@ -161,7 +161,7 @@ class DynamicButtonStack: UIView {
         }
     }
 
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
 
         if buttons.isEmpty {
