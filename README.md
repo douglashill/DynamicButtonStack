@@ -40,7 +40,15 @@ You can supply as many buttons as you like. Their titles can be as long as you l
 Create a `DynamicButtonStack` and give it an array of buttons that each have both an image and a title. Add the button stack to your view hierarchy.
 
 ```swift
-let buttonStack = ...
+let button = UIButton()
+button.setImage(UIImage(systemName: "paperplane"), for: .normal)
+button.setTitle("Send", for: .normal)
+
+buttonStack = DynamicButtonStack(buttons: [
+    button,
+])
+
+view.addSubview(buttonStack)
 ```
 
 The button stack should be laid out using `sizeThatFits` and `layoutSubviews`. Layout using constraints is not supported.
@@ -50,12 +58,13 @@ The frame should be set with a size at least as large as the size returned from 
 Measure the minimum size using `sizeThatFits`. Pass your container’s width limit and an unlimited height. An assertion will fail if the height is not unlimited. This is a reminder that handling restricted heights is not currently supported.
 
 ```swift
-override func layoutSubviews...
-
-let sizeLimit = (bounds.width, .greatestFiniteMagnitude)
-let size = sizeThatFits...
-
-buttonStack.frame = CGRect(origin: .zero, size: size)
+override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    let availableSize = CGSize(width: bounds.width, height: .greatestFiniteMagnitude)
+    let requiredSize = buttonStack.sizeThatFits(availableSize)
+    buttonStack.frame = CGRect(origin: .zero, size: requiredSize)
+}
 ```
 
 The buttons can be styled however you like. Colour, font, shadow, highlight state etc.
