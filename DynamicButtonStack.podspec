@@ -13,7 +13,7 @@ A view for UIKit apps that dynamically lays out a collection of buttons in eithe
 
     spec.source = { :git => 'https://github.com/douglashill/DynamicButtonStack.git', :tag => spec.version.to_s }
     spec.swift_version = '5.0'
-    spec.ios.deployment_target  = '11.0'
+    spec.ios.deployment_target  = '13.0'
     spec.source_files = 'DynamicButtonStack.swift'
 
 end

@@ -15,19 +15,19 @@ class DemoViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(scrollView)
-        view.backgroundColor = .systemBackground_
+        view.backgroundColor = .systemBackground
 
         let makeButton: (String?, String?) -> UIButton = { imageName, title in
             let button = UIButton()
             button.setTitle(title, for: .normal)
-            button.setTitleColor(.label_, for: .normal)
+            button.setTitleColor(.label, for: .normal)
             button.titleLabel!.font = UIFont.preferredFont(forTextStyle: .body)
             if let imageName = imageName {
-                button.setImage(UIImage.createWithSystemName(imageName, font: button.titleLabel!.font), for: .normal)
+                button.setImage(UIImage(systemName: imageName, withConfiguration: UIImage.SymbolConfiguration(font: button.titleLabel!.font)), for: .normal)
             }
             button.layer.cornerRadius = 10
             button.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-            button.backgroundColor = .secondarySystemBackground_
+            button.backgroundColor = .secondarySystemBackground
             return button
         }
 

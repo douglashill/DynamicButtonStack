@@ -12,7 +12,6 @@
 		A55A4F29241968AB00AA6405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55A4F28241968AB00AA6405 /* Assets.xcassets */; };
 		A55A4F2C241968AB00AA6405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */; };
 		A55A4F34241968BC00AA6405 /* DynamicButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */; };
-		A58AFEBD24431AAC0018E768 /* OldVersionCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58AFEBC24431AAC0018E768 /* OldVersionCompatibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,8 @@
 		A55A4F2B241968AB00AA6405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A55A4F2D241968AB00AA6405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicButtonStack.swift; path = ../DynamicButtonStack.swift; sourceTree = "<group>"; };
-		A58AFEBC24431AAC0018E768 /* OldVersionCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldVersionCompatibility.swift; sourceTree = "<group>"; };
+		A58FBAD3244327DF006EF941 /* DynamicButtonStack.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DynamicButtonStack.podspec; sourceTree = "<group>"; };
+		A58FBAD4244327DF006EF941 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +40,8 @@
 		A55A4F13241968A800AA6405 = {
 			isa = PBXGroup;
 			children = (
+				A58FBAD4244327DF006EF941 /* README.md */,
+				A58FBAD3244327DF006EF941 /* DynamicButtonStack.podspec */,
 				A55A4F1E241968A800AA6405 /* DynamicButtonStackDemo */,
 				A55A4F1D241968A800AA6405 /* Products */,
 			);
@@ -58,7 +60,6 @@
 			children = (
 				A55A4F1F241968A800AA6405 /* AppDelegate.swift */,
 				A55A4F23241968A800AA6405 /* DemoViewController.swift */,
-				A58AFEBC24431AAC0018E768 /* OldVersionCompatibility.swift */,
 				A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */,
 				A55A4F28241968AB00AA6405 /* Assets.xcassets */,
 				A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */,
@@ -140,7 +141,6 @@
 				A55A4F24241968A800AA6405 /* DemoViewController.swift in Sources */,
 				A55A4F20241968A800AA6405 /* AppDelegate.swift in Sources */,
 				A55A4F34241968BC00AA6405 /* DynamicButtonStack.swift in Sources */,
-				A58AFEBD24431AAC0018E768 /* OldVersionCompatibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +208,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -262,7 +262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
