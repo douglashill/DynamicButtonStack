@@ -11,7 +11,7 @@ public class DynamicButtonStack: UIView {
 
     private let internalSpacing: CGFloat = 8
 
-    public var buttons: [UIButton] = [] {
+    @objc public var buttons: [UIButton] = [] {
         willSet {
             for button in buttons {
                 button.removeFromSuperview()
@@ -31,7 +31,7 @@ public class DynamicButtonStack: UIView {
         }
     }
 
-    public convenience init(buttons: [UIButton]) {
+    @objc public convenience init(buttons: [UIButton]) {
         self.init(frame: .zero)
 
         self.buttons = buttons
