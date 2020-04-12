@@ -65,7 +65,8 @@ public class DynamicButtonStack: UIView {
     private func frameForButtonAtIndex(_ index: Int, stackingOrientation: UIButton.StackingOrientation) -> CGRect {
         switch stackingOrientation {
         case .horizontal:
-            return CGRect(x: CGFloat(index) * (usualButtonLengthForContainerLength(bounds.width) + internalSpacing), y: 0, width: lengthForButtonAtIndex(index, withContainerLength: bounds.width), height: bounds.height)
+            let effectiveIndex = isEffectiveUserInterfaceLayoutDirectionRightToLeft ? buttons.count - (index + 1) : index
+            return CGRect(x: CGFloat(effectiveIndex) * (usualButtonLengthForContainerLength(bounds.width) + internalSpacing), y: 0, width: lengthForButtonAtIndex(index, withContainerLength: bounds.width), height: bounds.height)
         case .vertical:
             return CGRect(x: 0, y: CGFloat(index) * (usualButtonLengthForContainerLength(bounds.height) + internalSpacing), width: bounds.width, height: lengthForButtonAtIndex(index, withContainerLength: bounds.height))
         }
@@ -319,7 +320,6 @@ public class DynamicButtonStack: UIView {
     }
 }
 
-
 private extension UIButton {
 
     enum StackingOrientation {
@@ -485,11 +485,10 @@ private extension UIEdgeInsets {
         let left: CGFloat
         let right: CGFloat
 
-        switch view.effectiveUserInterfaceLayoutDirection {
-        case .rightToLeft:
+        if view.isEffectiveUserInterfaceLayoutDirectionRightToLeft {
             left = trailing
             right = leading
-        case .leftToRight: fallthrough @unknown default:
+        } else {
             left = leading
             right = trailing
         }
@@ -499,6 +498,15 @@ private extension UIEdgeInsets {
 }
 
 private extension UIView {
+    var isEffectiveUserInterfaceLayoutDirectionRightToLeft: Bool {
+        switch effectiveUserInterfaceLayoutDirection {
+        case .rightToLeft:
+            return true
+        case .leftToRight: fallthrough @unknown default:
+            return false
+        }
+    }
+
     func roundToPixels(_ unrounded: CGFloat, function: (CGFloat) -> CGFloat = round) -> CGFloat {
         let scale = window?.screen.scale ?? 1
         return roundToPrecision(unrounded, precision: 1 / scale, function: function)
