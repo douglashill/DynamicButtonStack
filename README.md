@@ -10,8 +10,26 @@ DynamicButtonStack requires iOS 13. On older versions `UIButton` responds to `im
 
 ## Installation
 
+### Recommended
+
 1. Clone this repository.
 2. Drag `DynamicButtonStack.swift` into your Xcode project and add it to your target.
+
+### CocoaPods
+
+1. Add the following to your `Podfile`:
+    
+    ```ruby
+    pod 'DynamicButtonStack'
+    ```
+    
+2. Run the following command:
+    
+    ```
+    pod install
+    ```
+
+The module name when using CocoaPods is `DynamicButtonStackKit`.
 
 ## Usage
 
