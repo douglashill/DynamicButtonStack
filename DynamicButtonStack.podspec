@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name = 'DynamicButtonStack'
-    spec.module_name = 'DynamicButtonStack'
+    spec.module_name = 'DynamicButtonStackKit' # Module name must be different from the class name.
     spec.version = '1.0.0'
     spec.license = { :type => 'MIT', :file => 'License.txt' }
     spec.homepage = 'https://github.com/douglashill/DynamicButtonStack'
