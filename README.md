@@ -4,6 +4,8 @@ DynamicButtonStack lays out a collection of buttons in either a column or a row.
 
 [Read more about the problems solved by DynamicButtonStack and the design principles behind it.](https://douglashill.co/dynamic-button-stack/)
 
+![Composite screenshot of DynamicButtonStack in various languages. Chinese, English, German, Arabic.](screenshot.png)
+
 ## Requirements
 
 - DynamicButtonStack requires iOS 13. (On older versions `UIButton` responds to `imageEdgeInsets` slightly differently in some cases.)
@@ -35,9 +37,9 @@ The module name when using CocoaPods is `DynamicButtonStackKit`.
 
 ## Usage
 
-Your app provides a DynamicButtonStack with buttons and a maximum width. The DynamicButtonStack then provides your app the a minimum width and height it requires. You app then gives the DynamicButtonStack at least that amount of space and the buttons will be nicely stacked within it.
+Your app provides a DynamicButtonStack with buttons and a maximum width. The DynamicButtonStack then provides your app the minimum width and height required. You app then gives the DynamicButtonStack at least that amount of space and the buttons will be nicely stacked within that space.
 
-You can supply as many buttons as you like. Their titles can be as long as you like, and the font can be as large as you like. In exchange, give the button stack the height it needs. This means the button stack is typically best placed in a vertically scrolling view.
+You can supply as many buttons as you like. Their titles can be as long as you like, and the font can be as large as you like. In exchange, give the button stack the height it needs. Therefore the button stack is typically best placed in a vertically scrolling view.
 
 Create a `DynamicButtonStack` and give it an array of buttons that each have both an image and a title. Add the button stack to your view hierarchy.
 
