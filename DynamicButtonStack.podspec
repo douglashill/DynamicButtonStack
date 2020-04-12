@@ -1,0 +1,19 @@
+Pod::Spec.new do |spec|
+    spec.name = 'DynamicButtonStack'
+    spec.module_name = 'DynamicButtonStack'
+    spec.version = '1.0.0'
+    spec.license = { :type => 'MIT', :file => 'License.txt' }
+    spec.homepage = 'https://github.com/douglashill/DynamicButtonStack'
+    spec.authors = { 'Douglas Hill' => 'https://twitter.com/qdoug' }
+    spec.summary = 'A view for UIKit apps that dynamically lays out a collection of buttons in either a column or a row to suit the button content and the available space.'
+
+    spec.description = <<-DESC
+A view for UIKit apps that dynamically lays out a collection of buttons in either a column or a row to suit the button content and the available space.
+                       DESC
+
+    spec.source = { :git => 'https://github.com/douglashill/DynamicButtonStack.git', :tag => spec.version.to_s }
+    spec.swift_version = '5.0'
+    spec.ios.deployment_target  = '11.0'
+    spec.source_files = 'DynamicButtonStack.swift'
+
+end

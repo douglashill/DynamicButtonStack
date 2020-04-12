@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A55A4F20241968A800AA6405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F1F241968A800AA6405 /* AppDelegate.swift */; };
+		A55A4F24241968A800AA6405 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F23241968A800AA6405 /* DemoViewController.swift */; };
+		A55A4F29241968AB00AA6405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55A4F28241968AB00AA6405 /* Assets.xcassets */; };
+		A55A4F2C241968AB00AA6405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */; };
+		A55A4F34241968BC00AA6405 /* DynamicButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */; };
+		A58AFEBD24431AAC0018E768 /* OldVersionCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58AFEBC24431AAC0018E768 /* OldVersionCompatibility.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A55A4F1C241968A800AA6405 /* DynamicButtonStackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicButtonStackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55A4F1F241968A800AA6405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A55A4F23241968A800AA6405 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		A55A4F28241968AB00AA6405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A55A4F2B241968AB00AA6405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A55A4F2D241968AB00AA6405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicButtonStack.swift; path = ../DynamicButtonStack.swift; sourceTree = "<group>"; };
+		A58AFEBC24431AAC0018E768 /* OldVersionCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldVersionCompatibility.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A55A4F19241968A800AA6405 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A55A4F13241968A800AA6405 = {
+			isa = PBXGroup;
+			children = (
+				A55A4F1E241968A800AA6405 /* DynamicButtonStackDemo */,
+				A55A4F1D241968A800AA6405 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A55A4F1D241968A800AA6405 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A55A4F1C241968A800AA6405 /* DynamicButtonStackDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A55A4F1E241968A800AA6405 /* DynamicButtonStackDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A55A4F1F241968A800AA6405 /* AppDelegate.swift */,
+				A55A4F23241968A800AA6405 /* DemoViewController.swift */,
+				A58AFEBC24431AAC0018E768 /* OldVersionCompatibility.swift */,
+				A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */,
+				A55A4F28241968AB00AA6405 /* Assets.xcassets */,
+				A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */,
+				A55A4F2D241968AB00AA6405 /* Info.plist */,
+			);
+			path = DynamicButtonStackDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A55A4F1B241968A800AA6405 /* DynamicButtonStackDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A55A4F30241968AB00AA6405 /* Build configuration list for PBXNativeTarget "DynamicButtonStackDemo" */;
+			buildPhases = (
+				A55A4F18241968A800AA6405 /* Sources */,
+				A55A4F19241968A800AA6405 /* Frameworks */,
+				A55A4F1A241968A800AA6405 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicButtonStackDemo;
+			productName = DynamicButtonStackDemo;
+			productReference = A55A4F1C241968A800AA6405 /* DynamicButtonStackDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A55A4F14241968A800AA6405 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Douglas Hill";
+				TargetAttributes = {
+					A55A4F1B241968A800AA6405 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A55A4F17241968A800AA6405 /* Build configuration list for PBXProject "DynamicButtonStack" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A55A4F13241968A800AA6405;
+			productRefGroup = A55A4F1D241968A800AA6405 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A55A4F1B241968A800AA6405 /* DynamicButtonStackDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A55A4F1A241968A800AA6405 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55A4F2C241968AB00AA6405 /* LaunchScreen.storyboard in Resources */,
+				A55A4F29241968AB00AA6405 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A55A4F18241968A800AA6405 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55A4F24241968A800AA6405 /* DemoViewController.swift in Sources */,
+				A55A4F20241968A800AA6405 /* AppDelegate.swift in Sources */,
+				A55A4F34241968BC00AA6405 /* DynamicButtonStack.swift in Sources */,
+				A58AFEBD24431AAC0018E768 /* OldVersionCompatibility.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A55A4F2B241968AB00AA6405 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A55A4F2E241968AB00AA6405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A55A4F2F241968AB00AA6405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A55A4F31241968AB00AA6405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A8QT46Z78;
+				INFOPLIST_FILE = DynamicButtonStackDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.douglashill.DynamicButtonStackDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A55A4F32241968AB00AA6405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3A8QT46Z78;
+				INFOPLIST_FILE = DynamicButtonStackDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.douglashill.DynamicButtonStackDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A55A4F17241968A800AA6405 /* Build configuration list for PBXProject "DynamicButtonStack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55A4F2E241968AB00AA6405 /* Debug */,
+				A55A4F2F241968AB00AA6405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A55A4F30241968AB00AA6405 /* Build configuration list for PBXNativeTarget "DynamicButtonStackDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55A4F31241968AB00AA6405 /* Debug */,
+				A55A4F32241968AB00AA6405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A55A4F14241968A800AA6405 /* Project object */;
+}
