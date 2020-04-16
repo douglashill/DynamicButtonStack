@@ -38,6 +38,20 @@ public class DynamicButtonStack: UIView {
         didSetButtons()
     }
 
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        sharedInit()
+    }
+
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        sharedInit()
+    }
+
+    private func sharedInit() {
+        setContentCompressionResistancePriority(.required, for: .vertical)
+    }
+
     private func usualButtonLengthForContainerLength(_ containerLength: CGFloat) -> CGFloat {
         precondition(buttons.isEmpty == false)
 
@@ -70,6 +84,28 @@ public class DynamicButtonStack: UIView {
         case .vertical:
             return CGRect(x: 0, y: CGFloat(index) * (usualButtonLengthForContainerLength(bounds.height) + internalSpacing), width: bounds.width, height: lengthForButtonAtIndex(index, withContainerLength: bounds.height))
         }
+    }
+
+    public override var frame: CGRect {
+        didSet {
+            // It doesn’t work without this being async.
+            DispatchQueue.main.async {
+                self.invalidateIntrinsicContentSize()
+            }
+        }
+    }
+
+    public override var bounds: CGRect {
+        didSet {
+            // It doesn’t work without this being async.
+            DispatchQueue.main.async {
+                self.invalidateIntrinsicContentSize()
+            }
+        }
+    }
+
+    public override var intrinsicContentSize: CGSize {
+        sizeThatFits(CGSize(width: bounds.width, height: .greatestFiniteMagnitude))
     }
 
     public override func sizeThatFits(_ availableSize: CGSize) -> CGSize {
