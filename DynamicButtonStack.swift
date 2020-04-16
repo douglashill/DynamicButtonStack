@@ -88,15 +88,18 @@ public class DynamicButtonStack: UIView {
 
     public override var frame: CGRect {
         didSet {
-            // It doesn’t work without this being async.
-            DispatchQueue.main.async {
-                self.invalidateIntrinsicContentSize()
-            }
+            invalidateIntrinsicContentSizeIfNeededWithOldWidth(oldValue.width)
         }
     }
 
     public override var bounds: CGRect {
         didSet {
+            invalidateIntrinsicContentSizeIfNeededWithOldWidth(oldValue.width)
+        }
+    }
+
+    private func invalidateIntrinsicContentSizeIfNeededWithOldWidth(_ oldWidth: CGFloat) {
+        if bounds.width != oldWidth {
             // It doesn’t work without this being async.
             DispatchQueue.main.async {
                 self.invalidateIntrinsicContentSize()
