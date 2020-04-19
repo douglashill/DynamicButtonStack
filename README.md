@@ -55,11 +55,11 @@ buttonStack = DynamicButtonStack(buttons: [
 view.addSubview(buttonStack)
 ```
 
-The button stack should be laid out using `sizeThatFits` and `layoutSubviews`. Layout using constraints is not supported.
+The button stack can be laid out with either `sizeThatFits` and `layoutSubviews` or using constraints.
 
-The frame should be set with a size at least as large as the size returned from `sizeThatFits` (in both dimensions).
+When using constraints, the stack sets its vertical compression resistance priority to required because the buttons may be clipped otherwise. Typically a width constraint should be provided.
 
-Measure the minimum size using `sizeThatFits`. Pass your container’s width limit and an unlimited height. An assertion will fail if the height is not unlimited. This is a reminder that handling restricted heights is not currently supported.
+When using `layoutSubviews`, the frame should be set with a size at least as large as the size returned from `sizeThatFits` (in both dimensions). Measure the minimum size using `sizeThatFits`. Pass your container’s width limit and an unlimited height. An assertion will fail if the height is not unlimited. This is a reminder that handling restricted heights is not currently supported.
 
 ```swift
 override func layoutSubviews() {
@@ -86,10 +86,6 @@ The buttons can be styled however you like. Colour, font, shadow, highlight stat
 😇 There is no private API use or interference with private subviews.
 
 ## Q & A
-
-### Does DynamicButtonStack support being laid out with constraints?
-
-🙅‍♀️ No. It must be measured using `sizeThatFits`. It does not supply an `intrinsicContentSize` because like with text, the intrinsic height depends on the width.
 
 ### Does DynamicButtonStack use modern layout API like constraints, UIStackView or SwiftUI?
 
