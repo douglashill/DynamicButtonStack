@@ -19,7 +19,7 @@ DynamicButtonStack lays out a collection of buttons in either a column or a row.
 1. Clone this repository.
 2. Drag `DynamicButtonStack.swift` into your Xcode project and add it to your target.
 
-### Swift Package Manager
+### Swift Package Manager
 
 Add DynamicButtonStack to an existing Xcode project as a package dependency:
 
