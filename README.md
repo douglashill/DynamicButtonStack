@@ -2,13 +2,13 @@
 
 DynamicButtonStack lays out a collection of buttons in either a column or a row. It dynamically adjusts the layout to suit the button content and the available space.
 
-[Read more about the problems solved by DynamicButtonStack and the design principles behind it.](https://douglashill.co/dynamic-button-stack/)
+See the blog post to read more about [the problems solved by DynamicButtonStack and the design principles behind it.](https://douglashill.co/dynamic-button-stack/)
 
 ![Composite screenshot of DynamicButtonStack in various languages. Chinese, English, German, Arabic.](screenshot.png)
 
 ## Requirements
 
-- DynamicButtonStack requires iOS 13. (On older versions `UIButton` responds to `imageEdgeInsets` slightly differently in some cases.)
+- DynamicButtonStack requires iOS 13 or later.
 - The latest stable Xcode is expected.
 - Works with both Swift and Objective-C apps.
 
