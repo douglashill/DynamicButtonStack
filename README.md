@@ -16,15 +16,15 @@ DynamicButtonStack lays out a collection of buttons in either a column or a row.
 
 ### Direct
 
-1. Clone this repository.
-2. Drag `DynamicButtonStack.swift` into your Xcode project and add it to your target.
+1. Clone this repository or download [`DynamicButtonStack.swift`](DynamicButtonStack.swift) from GitHub.
+2. Drag this file into your Xcode project and choose to add it to your target when prompted.
 
 ### Swift Package Manager
 
 Add DynamicButtonStack to an existing Xcode project as a package dependency:
 
 1. From the File menu, select Swift Packages › Add Package Dependency…
-2. Enter “https://github.com/douglashill/DynamicButtonStack” as the package repository URL.
+2. Enter `https://github.com/douglashill/DynamicButtonStack` as the package repository URL.
 
 ### CocoaPods
 
@@ -94,13 +94,9 @@ The buttons can be styled however you like. Colour, font, shadow, highlight stat
 
 ## Q & A
 
-### Does DynamicButtonStack use modern layout API like constraints, UIStackView or SwiftUI?
+### Which scheme should be used for development?
 
-😄 No.
-
-### Would this be easier with SwiftUI?
-
-🤷‍♂️ Maybe. If you think so I’d love to see how this would look.
+There are two identical schemes in the Xcode project to [encourage Swift Package Index to build the Swift package instead of trying to build the demo app](https://swiftpackageindex.com/docs/builds#built-how). Therefore it makes no difference which scheme is used for development. 
 
 ## Credits
 
