@@ -347,7 +347,7 @@ public class DynamicButtonStack: UIView {
             button.updateEdgeInsetsForStackingOrientation(.vertical, imageSize: internalSizes.imageSize, titleSize: internalSizes.titleSize, largestImageLength: tallestImageHeight, largestTitleLength: tallestTitleHeight)
         }
 
-        return  true
+        return true
     }
 
     private func layoutHorizontalHorizontal() {
