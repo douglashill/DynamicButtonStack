@@ -28,19 +28,7 @@ Add DynamicButtonStack to an existing Xcode project as a package dependency:
 
 ### CocoaPods
 
-1. Add the following to your `Podfile`:
-    
-    ```ruby
-    pod 'DynamicButtonStack'
-    ```
-    
-2. Run the following command:
-    
-    ```
-    pod install
-    ```
-
-The module name when using CocoaPods is `DynamicButtonStackKit`.
+[DynamicButtonStack is available on CocoaPods](https://cocoapods.org/pods/DynamicButtonStack) as `DynamicButtonStack`. The module name when using CocoaPods is `DynamicButtonStackKit`.
 
 ## Usage
 
