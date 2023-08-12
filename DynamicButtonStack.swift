@@ -547,8 +547,12 @@ private extension UIView {
     }
 
     func roundToPixels(_ unrounded: CGFloat, function: (CGFloat) -> CGFloat = round) -> CGFloat {
+#if os(visionOS)
+        function(unrounded)
+#else
         let scale = window?.screen.scale ?? 1
         return roundToPrecision(unrounded, precision: 1 / scale, function: function)
+#endif
     }
 }
 
