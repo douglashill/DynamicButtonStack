@@ -520,7 +520,7 @@ private extension UIButton {
 
 private extension UIEdgeInsets {
     /// Maps leading and trailing to right and left for right-to-left layout.
-    init(view: UIView, top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) {
+    @MainActor init(view: UIView, top: CGFloat, leading: CGFloat, bottom: CGFloat, trailing: CGFloat) {
         let left: CGFloat
         let right: CGFloat
 
