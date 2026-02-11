@@ -9,8 +9,16 @@ import UIKit
 /// The height passed to sizeThatFits should be greatestFiniteMagnitude.
 public class DynamicButtonStack: UIView {
 
-    private let internalSpacing: CGFloat = 8
+    /// The spacing between adjacent edges of the buttons.
+    /// This will be either horizontal or vertical spacing
+    /// depending on the stacking orientation being used.
+    public var spacing: CGFloat = 8 {
+        didSet {
+            setNeedsLayout()
+        }
+    }
 
+    /// The buttons to stack.
     @objc public var buttons: [UIButton] = [] {
         willSet {
             for button in buttons {
@@ -55,7 +63,7 @@ public class DynamicButtonStack: UIView {
     private func usualButtonLengthForContainerLength(_ containerLength: CGFloat) -> CGFloat {
         precondition(buttons.isEmpty == false)
 
-        let unrounded = (containerLength - CGFloat(buttons.count - 1) * internalSpacing) / CGFloat(buttons.count)
+        let unrounded = (containerLength - CGFloat(buttons.count - 1) * spacing) / CGFloat(buttons.count)
         return roundToPixels(unrounded, function: floor)
     }
 
@@ -66,7 +74,7 @@ public class DynamicButtonStack: UIView {
         // Reasoning is the buttons are wider than the spacing so the difference will be least noticeable on the button.
         // It could be any button really. Choosing the last one is arbitrary, although it makes the implementation of frameForButtonAtIndex a bit simpler.
         if index == buttons.count - 1 {
-            return containerLength - CGFloat(buttons.count - 1) * (usualButtonLength + internalSpacing)
+            return containerLength - CGFloat(buttons.count - 1) * (usualButtonLength + spacing)
         } else {
             return usualButtonLength
         }
@@ -80,9 +88,9 @@ public class DynamicButtonStack: UIView {
         switch stackingOrientation {
         case .horizontal:
             let effectiveIndex = isEffectiveUserInterfaceLayoutDirectionRightToLeft ? buttons.count - (index + 1) : index
-            return CGRect(x: CGFloat(effectiveIndex) * (usualButtonLengthForContainerLength(bounds.width) + internalSpacing), y: 0, width: lengthForButtonAtIndex(index, withContainerLength: bounds.width), height: bounds.height)
+            return CGRect(x: CGFloat(effectiveIndex) * (usualButtonLengthForContainerLength(bounds.width) + spacing), y: 0, width: lengthForButtonAtIndex(index, withContainerLength: bounds.width), height: bounds.height)
         case .vertical:
-            return CGRect(x: 0, y: CGFloat(index) * (usualButtonLengthForContainerLength(bounds.height) + internalSpacing), width: bounds.width, height: lengthForButtonAtIndex(index, withContainerLength: bounds.height))
+            return CGRect(x: 0, y: CGFloat(index) * (usualButtonLengthForContainerLength(bounds.height) + spacing), width: bounds.width, height: lengthForButtonAtIndex(index, withContainerLength: bounds.height))
         }
     }
 
@@ -144,7 +152,7 @@ public class DynamicButtonStack: UIView {
             let maxWidth = layoutInfoForHorizontalStacking.max(by: { $0.buttonSize.width < $1.buttonSize.width} )!.buttonSize.width
             let maxHeight = layoutInfoForHorizontalStacking.max(by: { $0.buttonSize.height < $1.buttonSize.height} )!.buttonSize.height
             return CGSize(
-                width: maxWidth * CGFloat(buttons.count) + internalSpacing * CGFloat(buttons.count - 1),
+                width: maxWidth * CGFloat(buttons.count) + spacing * CGFloat(buttons.count - 1),
                 height: maxHeight
             )
         }
@@ -164,7 +172,7 @@ public class DynamicButtonStack: UIView {
             let maxWidth = sizes.max(by: { $0.width < $1.width} )!.width
             let maxHeight = sizes.max(by: { $0.height < $1.height} )!.height
             return CGSize(
-                width: maxWidth * CGFloat(buttons.count) + internalSpacing * CGFloat(buttons.count - 1),
+                width: maxWidth * CGFloat(buttons.count) + spacing * CGFloat(buttons.count - 1),
                 height: maxHeight
             )
         }
@@ -186,17 +194,17 @@ public class DynamicButtonStack: UIView {
             let maxHeight = layoutInfoForVerticalStacking.max(by: { $0.buttonSize.height < $1.buttonSize.height} )!.buttonSize.height
             return CGSize(
                 width: maxWidth,
-                height: maxHeight * CGFloat(buttons.count) + internalSpacing * CGFloat(buttons.count - 1)
+                height: maxHeight * CGFloat(buttons.count) + spacing * CGFloat(buttons.count - 1)
             )
         }
 
         // (4) Go for vertical stacking of the buttons and vertical stacking in the buttons. This is the only case where the labels may use multiple lines.
         return buttons.enumerated().map { index, button -> CGSize in
             return button.sizeForVerticalStackingForWidth(availableWidth)
-        }.reduce(CGSize(width: 0, height: -internalSpacing)) { buttonSize, accumulator -> CGSize in
+        }.reduce(CGSize(width: 0, height: -spacing)) { buttonSize, accumulator -> CGSize in
             CGSize(
                 width: max(accumulator.width, buttonSize.width),
-                height: accumulator.height + internalSpacing + buttonSize.height
+                height: accumulator.height + spacing + buttonSize.height
             )
         }
     }
@@ -252,7 +260,7 @@ public class DynamicButtonStack: UIView {
 
         let totalFittingHeightOfButtons = fittingHeights.reduce(0) { $0 + $1 }
 
-        let availableHeightForButtons = bounds.height - internalSpacing * CGFloat(buttons.count - 1)
+        let availableHeightForButtons = bounds.height - spacing * CGFloat(buttons.count - 1)
 
         /// Used to scale up the height of each button proportionally when the space available is more or less than the space needed.
         let heightScale = availableHeightForButtons / totalFittingHeightOfButtons
@@ -274,7 +282,7 @@ public class DynamicButtonStack: UIView {
 
             button.updateEdgeInsetsForStackingOrientation(.vertical, imageSize: internalSizes.imageSize, titleSize: internalSizes.titleSize, largestImageLength: nil, largestTitleLength: nil)
 
-            unroundedOriginY += unroundedHeight + internalSpacing
+            unroundedOriginY += unroundedHeight + spacing
         }
     }
 
@@ -301,7 +309,7 @@ public class DynamicButtonStack: UIView {
         }
 
         let totalFittingHeightOfButtons = layoutInfoForOuterVerticalStacking.reduce(0) { $0 + $1.buttonSize.height }
-        let availableHeightForButtons = bounds.height - internalSpacing * CGFloat(buttons.count - 1)
+        let availableHeightForButtons = bounds.height - spacing * CGFloat(buttons.count - 1)
 
         guard totalFittingHeightOfButtons <= availableHeightForButtons else {
             return .notEnoughHeight
