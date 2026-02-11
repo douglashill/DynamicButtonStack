@@ -1,6 +1,6 @@
 # DynamicButtonStack
 
-DynamicButtonStack lays out a collection of buttons in either a column or a row. It dynamically adjusts the layout to suit the button content and the available space.
+DynamicButtonStack lays out a collection of UIKit buttons in either a column or a row. It dynamically adjusts the layout to suit the button content and the available space.
 
 See the blog post to read more about [the problems solved by DynamicButtonStack and the design principles behind it.](https://douglashill.co/dynamic-button-stack/)
 
@@ -10,14 +10,8 @@ See the blog post to read more about [the problems solved by DynamicButtonStack 
 
 - DynamicButtonStack requires iOS 13 or later.
 - The latest stable Xcode is expected.
-- Works with both Swift and Objective-C apps.
 
 ## Installation
-
-### Direct
-
-1. Clone this repository or download [`DynamicButtonStack.swift`](DynamicButtonStack.swift) from GitHub.
-2. Drag this file into your Xcode project and choose to add it to your target when prompted.
 
 ### Swift Package Manager
 
@@ -26,13 +20,14 @@ Add DynamicButtonStack to an existing Xcode project as a package dependency:
 1. From the File menu, select Swift Packages › Add Package Dependency…
 2. Enter `https://github.com/douglashill/DynamicButtonStack` as the package repository URL.
 
-### CocoaPods
+### Direct
 
-[DynamicButtonStack is available on CocoaPods](https://cocoapods.org/pods/DynamicButtonStack) as `DynamicButtonStack`. The module name when using CocoaPods is `DynamicButtonStackKit`.
+1. Clone this repository or download [`DynamicButtonStack.swift`](DynamicButtonStack.swift) from GitHub.
+2. Drag this file into your Xcode project and choose to add it to your target when prompted.
 
 ## Usage
 
-Your app provides a DynamicButtonStack with buttons and a maximum width. The DynamicButtonStack then provides your app the minimum width and height required. You app then gives the DynamicButtonStack at least that amount of space and the buttons will be nicely stacked within that space.
+Your app provides a DynamicButtonStack with buttons and a maximum width. The DynamicButtonStack then provides your app the minimum width and height required. Your app then gives the DynamicButtonStack at least that amount of space and the buttons will be nicely stacked within that space.
 
 You can supply as many buttons as you like. Their titles can be as long as you like, and the font can be as large as you like. In exchange, give the button stack the height it needs. Therefore the button stack is typically best placed in a vertically scrolling view.
 
