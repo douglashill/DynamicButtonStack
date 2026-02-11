@@ -23,7 +23,6 @@
 		A55A4F2D241968AB00AA6405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStack.swift; sourceTree = "<group>"; };
 		A5670B7F24BB09D700646FC4 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		A58FBAD3244327DF006EF941 /* DynamicButtonStack.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DynamicButtonStack.podspec; sourceTree = "<group>"; };
 		A58FBAD4244327DF006EF941 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,7 +42,6 @@
 			children = (
 				A58FBAD4244327DF006EF941 /* README.md */,
 				A5670B7F24BB09D700646FC4 /* Package.swift */,
-				A58FBAD3244327DF006EF941 /* DynamicButtonStack.podspec */,
 				A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */,
 				A55A4F1E241968A800AA6405 /* DynamicButtonStackDemo */,
 				A55A4F1D241968A800AA6405 /* Products */,
