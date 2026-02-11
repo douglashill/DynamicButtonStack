@@ -3,28 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A55A4F20241968A800AA6405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F1F241968A800AA6405 /* AppDelegate.swift */; };
-		A55A4F24241968A800AA6405 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F23241968A800AA6405 /* DemoViewController.swift */; };
-		A55A4F29241968AB00AA6405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55A4F28241968AB00AA6405 /* Assets.xcassets */; };
-		A55A4F2C241968AB00AA6405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */; };
 		A55A4F34241968BC00AA6405 /* DynamicButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A55A4F1C241968A800AA6405 /* DynamicButtonStackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicButtonStackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A55A4F1F241968A800AA6405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A55A4F23241968A800AA6405 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
-		A55A4F28241968AB00AA6405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A55A4F2B241968AB00AA6405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A55A4F2D241968AB00AA6405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicButtonStack.swift; sourceTree = "<group>"; };
 		A5670B7F24BB09D700646FC4 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		A58FBAD4244327DF006EF941 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A5B6428A2F3CFD730091962D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A55A4F1B241968A800AA6405 /* DynamicButtonStackDemo */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A5B642842F3CFD730091962D /* DynamicButtonStackDemo */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (A5B6428A2F3CFD730091962D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = DynamicButtonStackDemo; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A55A4F19241968A800AA6405 /* Frameworks */ = {
@@ -43,7 +48,7 @@
 				A58FBAD4244327DF006EF941 /* README.md */,
 				A5670B7F24BB09D700646FC4 /* Package.swift */,
 				A55A4F33241968BC00AA6405 /* DynamicButtonStack.swift */,
-				A55A4F1E241968A800AA6405 /* DynamicButtonStackDemo */,
+				A5B642842F3CFD730091962D /* DynamicButtonStackDemo */,
 				A55A4F1D241968A800AA6405 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,18 +59,6 @@
 				A55A4F1C241968A800AA6405 /* DynamicButtonStackDemo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A55A4F1E241968A800AA6405 /* DynamicButtonStackDemo */ = {
-			isa = PBXGroup;
-			children = (
-				A55A4F1F241968A800AA6405 /* AppDelegate.swift */,
-				A55A4F23241968A800AA6405 /* DemoViewController.swift */,
-				A55A4F28241968AB00AA6405 /* Assets.xcassets */,
-				A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */,
-				A55A4F2D241968AB00AA6405 /* Info.plist */,
-			);
-			path = DynamicButtonStackDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +75,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A5B642842F3CFD730091962D /* DynamicButtonStackDemo */,
 			);
 			name = DynamicButtonStackDemo;
 			productName = DynamicButtonStackDemo;
@@ -127,8 +123,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A55A4F2C241968AB00AA6405 /* LaunchScreen.storyboard in Resources */,
-				A55A4F29241968AB00AA6405 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,24 +133,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A55A4F24241968A800AA6405 /* DemoViewController.swift in Sources */,
-				A55A4F20241968A800AA6405 /* AppDelegate.swift in Sources */,
 				A55A4F34241968BC00AA6405 /* DynamicButtonStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A55A4F2A241968AB00AA6405 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A55A4F2B241968AB00AA6405 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A55A4F2E241968AB00AA6405 /* Debug */ = {
